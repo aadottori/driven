@@ -33,6 +33,7 @@ div.navbar {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 div.navbar input {
@@ -63,6 +64,7 @@ div.navbar-mobile {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 
