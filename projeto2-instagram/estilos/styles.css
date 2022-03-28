@@ -1,10 +1,23 @@
 body {
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    background-color: #fafafa;
 }
 
 div.conteudo-principal {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+}
+
+div.coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+/* alterar */
+div.esquerda {
+    margin-left: 200px;
+    display: flex;
     flex-direction: column;
 }
 
@@ -14,6 +27,7 @@ div.navbar {
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
 }
 
 div.navbar input {
@@ -21,6 +35,7 @@ div.navbar input {
     width: 215px;
     text-align: center;
     background-color: #FAFAFA;
+    border-radius: 3px;
 }
 
 div.navbar-item {
@@ -28,6 +43,15 @@ div.navbar-item {
     justify-content: space-between;
     align-items: center;
 }
+
+
+div.navbar-mobile {
+    height: 54px;
+    display: none;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
+}
+
 
 
 div.divisor-horizontal {
@@ -42,14 +66,13 @@ div.stories {
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     margin-top: 34px;
-    margin-left: 200px;
     margin-bottom: 24px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: space-around;
+    background-color: #FFFFFF;
 }
-
 
 div.stories-item {
     display: flex;
@@ -63,7 +86,6 @@ div.stories-item p {
     font-size: 12px;
     font-weight: 400;
     text-align: center;
-
 }
 
 div.stories-item img {
@@ -72,7 +94,6 @@ div.stories-item img {
     text-align: center;
 }
 
-
 div.post {
     background-color: #ffffff;
     width: 614px;
@@ -80,10 +101,8 @@ div.post {
     border-radius: 3px;
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
-    /* alterar margem */
+    margin-bottom: 60px;
 }
-
 
 div.post img {
     width: 100%;
@@ -98,16 +117,14 @@ div.titulo-post {
 
 div.legenda-post {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     width: 100%;
+    padding-top: 13.5px;
 }
 
-div.legenda-post-icone-esquerda {
+div.legenda-post-item {
     margin-left: 17.75px
-}
-div.legenda-post-icone-direita {
-    margin-right: 17.75px
-}
+} 
 
 div.curtidas-post {
     display: flex;
@@ -130,10 +147,77 @@ div.profile-icon img {
 
 div.sidebar {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 300px;
-    margin-left: 30px;
+    width: 293px;
+    padding-left: 30px;
 }
+
+
+
+div.sidebar-usuario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    padding-top: 57px;
+    width: 100%;
+}
+
+div.sidebar-usuario img {
+    margin-left: 0;
+    width: 56;
+    height: 56px;
+}
+
+div.sidebar-usuario p {
+    vertical-align: center;
+    margin-left: 17px;
+
+}
+
+div.item-sugestao {
+    display: flex;
+    width: 100%;
+    padding-top: 17px;
+}
+
+div.item-sugestao-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+div.item-sugestao-descricao p {
+    margin-left: 14px;
+}
+
+div.item-sugestao-seguir {
+    padding-right: 0px;
+}
+
+div.icon {
+    width: 18px;
+    height: 18px;
+}
+
+div.sugestao-legenda p{
+    padding-top: 33px;
+    font-size: 11px;
+    line-height: 12.89px;
+    font-weight: 400px;
+    color: #c7c7c7;
+    margin-bottom: 18px;
+}
+
+
+div.barra-inferior {
+    height: 54px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: #FFFFFF;
+}
+
 
 
 span.font-medium {
@@ -149,5 +233,62 @@ span.font-light {
     font-weight: 300;
     line-height: 16.41px;
     color: #262626;    ;
+}
+
+
+
+
+@media screen and (max-width: 935px) and (min-width: 614px) {
+    div.sidebar {
+        display: none
+    }
+
+    div.esquerda {
+        justify-content: center;
+        margin: auto;
+    }
+}
+
+
+
+@media screen and (max-width: 614px) {
+    div.sidebar {
+        display: none
+    }
+
+    div.navbar {
+        display: none;
+    }
+
+    div.navbar-mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    div.esquerda {
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+    }
+
+    div.post {
+        width: 100%;
+    }
+
+    div.stories {
+        width: 100%;
+        background-color: #fafafa;
+        padding-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    div.barra-inferior {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 1px solid #DBDBDB;
+    }
 }
 
