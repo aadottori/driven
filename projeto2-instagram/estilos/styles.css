@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     background-color: #fafafa;
+    padding-top: 54px;
 }
 
 div.conteudo-principal {
@@ -12,13 +13,14 @@ div.conteudo-principal {
 div.coluna {
     display: flex;
     flex-direction: column;
+    padding-top: 34px;
 }
 
 /* alterar */
 div.esquerda {
-    margin-left: 200px;
     display: flex;
     flex-direction: column;
+    margin-left: calc((100vw - 614px - 293px)/2);
 }
 
 div.navbar {
@@ -28,6 +30,9 @@ div.navbar {
     align-items: center;
     border-bottom: 1px solid #DBDBDB;
     background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 div.navbar input {
@@ -36,6 +41,7 @@ div.navbar input {
     text-align: center;
     background-color: #FAFAFA;
     border-radius: 3px;
+    border: 1px solid #DBDBDB;
 }
 
 div.navbar-item {
@@ -44,14 +50,32 @@ div.navbar-item {
     align-items: center;
 }
 
+div.navbar-item-direita {
+    width: calc(3*28px + 4*17px);
+}
+
 
 div.navbar-mobile {
     height: 54px;
     display: none;
     border-bottom: 1px solid #DBDBDB;
     background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
+
+div.logo-instagram {
+    padding-right: 11px;
+    border-right: 1px solid #DBDBDB;
+}
+
+
+div.imagem-logo-instagram {
+    padding-left: 11px;
+    margin-top: 5px;
+}
 
 
 div.divisor-horizontal {
@@ -65,33 +89,55 @@ div.stories {
     height: 118px;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
-    margin-top: 34px;
     margin-bottom: 24px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-around;
     background-color: #FFFFFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-left: 18px;
+}
+
+div.principal {
+    position: relative;
+}
+
+div.secundario {
+    position: absolute;
+    opacity: 0;
 }
 
 div.stories-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 66px;
     margin-right: 14px;
+
 }
 
 div.stories-item p {
     font-size: 12px;
+    line-height: 14px;
     font-weight: 400;
-    text-align: center;
 }
 
-div.stories-item img {
+div.stories-item-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    text-align: center;
+    background-image: url("../imagens/stories_background.jpg");
+    background-size: 66px 66px;
+    background-position: center;
+}
+
+div.stories-item-img img {
     width: 56px;
     height: 56px;
-    text-align: center;
 }
 
 div.post {
@@ -102,6 +148,7 @@ div.post {
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
+    box-sizing: border-box;
 }
 
 div.post img {
@@ -111,13 +158,25 @@ div.post img {
 
 div.titulo-post {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+div.titulo-post-esquerda {
+    display: flex;
+    align-items: center;
+}
+
+
+div.titulo-post-direita {
+    margin-right: 17px;
 }
 
 div.legenda-post {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     padding-top: 13.5px;
 }
@@ -125,6 +184,16 @@ div.legenda-post {
 div.legenda-post-item {
     margin-left: 17.75px
 } 
+
+div.legenda-esquerda {
+    display: flex;
+    width: 104px;
+    justify-content: space-evenly;
+}
+
+div.legenda-direita {
+    margin-right: 17px;
+}
 
 div.curtidas-post {
     display: flex;
@@ -151,6 +220,7 @@ div.sidebar {
     align-items: center;
     width: 293px;
     padding-left: 30px;
+    position: fixed;
 }
 
 
@@ -158,14 +228,14 @@ div.sidebar {
 div.sidebar-usuario {
     display: flex;
     align-items: center;
+    margin-top: 23px;
     margin-bottom: 13px;
-    padding-top: 57px;
     width: 100%;
 }
 
 div.sidebar-usuario img {
     margin-left: 0;
-    width: 56;
+    width: 56px;
     height: 56px;
 }
 
@@ -177,8 +247,14 @@ div.sidebar-usuario p {
 
 div.item-sugestao {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding-top: 17px;
+}
+
+div.item-sugestao-icon {
+    display: flex;
 }
 
 div.item-sugestao-icon img {
@@ -190,8 +266,12 @@ div.item-sugestao-descricao p {
     margin-left: 14px;
 }
 
-div.item-sugestao-seguir {
+div.item-sugestao-seguir a {
     padding-right: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    color: #139EF2!important;
 }
 
 div.icon {
@@ -200,12 +280,16 @@ div.icon {
 }
 
 div.sugestao-legenda p{
-    padding-top: 33px;
+    padding-top: 18px;
     font-size: 11px;
     line-height: 12.89px;
     font-weight: 400px;
     color: #c7c7c7;
-    margin-bottom: 18px;
+}
+
+div.sugestoes {
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 
@@ -224,7 +308,7 @@ span.font-medium {
     font-size: 14px;
     font-weight: 500;
     line-height: 16.41px;
-    color: #262626;    ;
+    color: #262626;
 }
 
 
@@ -252,6 +336,11 @@ span.font-light {
 
 
 @media screen and (max-width: 614px) {
+
+    div.coluna {
+        padding-top: 0;
+    }
+
     div.sidebar {
         display: none
     }

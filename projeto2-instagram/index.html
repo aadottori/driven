@@ -15,18 +15,17 @@
 
     <div class="navbar">
         <div class="navbar-item">
-            <div>
+            <div class="logo-instagram">
                 <ion-icon name="logo-instagram"></ion-icon>
             </div>
-            <div class="barra-horizontal"></div>
-            <div>
+            <div class="imagem-logo-instagram">
                 <img src="imagens/logo.png" />
             </div>
         </div>
         <div class="navbar-item">
             <input placeholder="Pesquisar" />
         </div>
-        <div class="navbar-item">
+        <div class="navbar-item navbar-item-direita">
             <div>
                 <ion-icon name="paper-plane-outline"></ion-icon>
             </div>
@@ -46,7 +45,7 @@
         <div>
             <ion-icon name="logo-instagram"></ion-icon>
         </div>
-        <div>
+        <div class="imagem-logo-instagram">
             <img src="imagens/logo.png" />
         </div>
         <div>
@@ -56,46 +55,83 @@
 
     <div class="conteudo-principal">
         <div class="coluna esquerda">  
-            <div class="stories">
+            <div class="stories principal">
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/9gag.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/9gag 1.png" />
+                    </div>
                     <p>9gag</p>
                 </div>
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/meowed.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/meowed 1.png" />
+                    </div>
                     <p>meowed</p>
                 </div>
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/alien.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/nathanwpylestrangeplanet 1.png" />
+                    </div>
                     <p>nathanwpyle...</p>
                 </div>
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/wawawiwa.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/wawawiwacomicsa 1.png" />
+                    </div>
                     <p>wawawiwac...</p>
                 </div>
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/respondeai.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/respondeai 1.png" />
+                    </div>
                     <p>respondeai</p>
                 </div>
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/filosofia-moderna.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/filomoderna 1.png" />
+                    </div>
                     <p>filomoderna</p>
                 </div>
                 <div class="stories-item">
-                    <img src="imagens/fotos-perfil/meme.jpeg" />
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/memeriagourmet 1.png" />
+                    </div>
+                    <p>memeriago</p>
+                </div>
+                <div class="stories-item">
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/chibirdart 1.png" />
+                    </div>
+                    <p>chibidart</p>
+                </div>
+                <div class="stories-item">
+                    <div class="stories-item-img">
+                        <img src="imagens/fotos-perfil/razoesparaacreditar 1.png" />
+                    </div>
                     <p>memeriago</p>
                 </div>
             </div>
 
+
+            <!-- A ideia aqui era colocar um div por cima do div de stories, contendo a setinha, mas não consegui fazer ficar com a opacidade correta. -->
+            
+            <!-- <div class="stories secundario">
+                <div>
+                    <ion-icon name="chevron-forward-circle"></ion-icon>
+                </div>
+            </div> -->
+            
             <div class="post">
                 <div class="titulo-post">
-                    <div class="profile-icon">
-                        <img src="imagens/fotos-perfil/meowed.jpeg"/>
+                    <div class="titulo-post-esquerda">
+                        <div class="profile-icon account">
+                            <img src="imagens/fotos-perfil/meowed 1.png"/>
+                        </div>
+                        <div class="account">
+                            <p class="account">meowed</p>
+                        </div>
                     </div>
-                    <div class="account">
-                        <p class="account">meowed</p>
-                    </div>
-                    <div>
+                    <div class="titulo-post-direita">
                         <ion-icon name="ellipsis-horizontal"></ion-icon>
                     </div>
                 </div>
@@ -105,24 +141,70 @@
                 </div>
 
                 <div class="legenda-post">
-                    <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                    <div class="legenda-esquerda">
+                        <div>
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+                        </div>
                     </div>
-                    <div>
-                        <ion-icon name="chatbubble-outline"></ion-icon>
-                    </div>
-                    <div>
-                        <ion-icon name="paper-plane-outline"></ion-icon>
-                    </div>
-                    <div>
+                    <div class="legenda-direita">
                         <ion-icon name="bookmark-outline"></ion-icon>
                     </div>
                 </div>
 
                 <div class="curtidas-post">
-                    <img src="imagens/fotos-perfil/respondeai.jpeg" />
+                    <img src="imagens/fotos-perfil/respondeai 1.png" />
                     <p>
                         <span class="font-light">Curtido por </span> <span class="font-medium">respondeai</span><span class="font-light"> e </span><span class="font-medium">101.523 pessoas</span>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="titulo-post">
+                    <div class="titulo-post-esquerda">
+                        <div class="profile-icon account">
+                            <img src="imagens/fotos-perfil/barked 1.png"/>
+                        </div>
+                        <div class="account">
+                            <p class="account">barked</p>
+                        </div>
+                    </div>
+                    <div class="titulo-post-direita">
+                        <ion-icon name="ellipsis-horizontal"></ion-icon>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="imagens/fotos-post/cachorro-dormindo.jpeg">
+                </div>
+
+                <div class="legenda-post">
+                    <div class="legenda-esquerda">
+                        <div>
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </div>
+                        <div>
+                            <ion-icon name="paper-plane-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="legenda-direita">
+                        <ion-icon name="bookmark-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="curtidas-post">
+                    <img src="imagens/fotos-perfil/adorableanimals 1.png" />
+                    <p>
+                        <span class="font-light">Curtido por </span> <span class="font-medium">adorableanimals</span><span class="font-light"> e </span><span class="font-medium">99.159 pessoas</span>.
                     </p>
                 </div>
             </div>
@@ -133,30 +215,86 @@
             <div class="sidebar">  
                 <div class="sidebar-usuario">
                     <div>
-                        <img src="imagens/fotos-perfil/9gag.jpeg"/>
+                        <img src="imagens/fotos-perfil/catanacomics 1.png"/>
                     </div>
                     <div>
                         <p><span class="font-medium">catanacomics</span></p>
                         <p><span class="font-light">Catana</span></p>
                     </div>
                 </div>
-                <div class="item-sugestao">
-                    <p><span class="font-light">Sugestões para você</span></p>
-                    <p><span class="font-medium">Ver tudo</span></p>
-                </div>
                 
-                <div class="item-sugestao">
-                    <div class="item-sugestao-icon">
-                        <img src="imagens/fotos-perfil/alien.jpeg" />
-                    </div> 
-                    <div class="item-sugestao-descricao">
-                        <p><span class="font-medium">good.vibes.memes</span></p>
-                        <p><span class="font-light">Segue você</span></p>
+                <div class="sugestoes">
+                    <div class="item-sugestao">
+                        <p><span class="font-light">Sugestões para você</span></p>
+                        <p><span class="font-medium">Ver tudo</span></p>
                     </div>
-                    <div class="item-sugestao-seguir">
-                        <a><span class="font-medium">Seguir</span></a> 
+                    
+                    <div class="item-sugestao">
+                        <div class="item-sugestao-icon">
+                            <img src="imagens/fotos-perfil/nathanwpylestrangeplanet 1.png" />
+                            <div class="item-sugestao-descricao">
+                                <p><span class="font-medium">good.vibes.memes</span></p>
+                                <p><span class="font-light">Segue você</span></p>
+                            </div>
+                        </div> 
+                        <div class="item-sugestao-seguir">
+                            <a>Seguir</a> 
+                        </div>
+                    </div>
+    
+                    <div class="item-sugestao">
+                        <div class="item-sugestao-icon">
+                            <img src="imagens/fotos-perfil/chibirdart 1.png" />
+                            <div class="item-sugestao-descricao">
+                                <p><span class="font-medium">chibidart</span></p>
+                                <p><span class="font-light">Segue você</span></p>
+                            </div>
+                        </div> 
+                        <div class="item-sugestao-seguir">
+                            <a>Seguir</a> 
+                        </div>
+                    </div>
+    
+                    <div class="item-sugestao">
+                        <div class="item-sugestao-icon">
+                            <img src="imagens/fotos-perfil/razoesparaacreditar 1.png" />
+                            <div class="item-sugestao-descricao">
+                                <p><span class="font-medium">razoesparaacreditar</span></p>
+                                <p><span class="font-light">Segue você</span></p>
+                            </div>
+                        </div> 
+                        <div class="item-sugestao-seguir">
+                            <a>Seguir</a> 
+                        </div>
+                    </div>
+    
+                    <div class="item-sugestao">
+                        <div class="item-sugestao-icon">
+                            <img src="imagens/fotos-perfil/adorableanimals 1.png" />
+                            <div class="item-sugestao-descricao">
+                                <p><span class="font-medium">adorable_animals</span></p>
+                                <p><span class="font-light">Segue você</span></p>
+                            </div>
+                        </div> 
+                        <div class="item-sugestao-seguir">
+                            <a>Seguir</a> 
+                        </div>
+                    </div>
+    
+                    <div class="item-sugestao">
+                        <div class="item-sugestao-icon">
+                            <img src="imagens/fotos-perfil/smallcutecats 1.png" />
+                            <div class="item-sugestao-descricao">
+                                <p><span class="font-medium">smallcutecats</span></p>
+                                <p><span class="font-light">Segue você</span></p>
+                            </div>
+                        </div> 
+                        <div class="item-sugestao-seguir">
+                            <a>Seguir</a> 
+                        </div>
                     </div>
                 </div>
+ 
 
       
                 <div class="sugestao-legenda">
