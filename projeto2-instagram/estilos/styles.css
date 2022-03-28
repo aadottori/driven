@@ -155,6 +155,10 @@ div.post img {
     width: 100%;
 }
 
+div.post video {
+    width: 100%;
+}
+
 
 div.titulo-post {
     display: flex;
