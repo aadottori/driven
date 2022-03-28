@@ -2,6 +2,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+div.conteudo-principal {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
 div.navbar {
     height: 54px;
     display: flex;
@@ -28,12 +34,42 @@ div.divisor-horizontal {
     border: 10px solid black;
 }
 
+
+/* STORIES */
 div.stories {
     width: 614px;
     height: 118px;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     margin-top: 34px;
+    margin-left: 200px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-around;
+}
+
+
+div.stories-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 66px;
+    margin-right: 14px;
+}
+
+div.stories-item p {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+div.stories-item img {
+    width: 56px;
+    height: 56px;
+    text-align: center;
 }
 
 
@@ -91,6 +127,13 @@ div.profile-icon img {
     height: 32px;
 }
 
+
+div.sidebar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-left: 30px;
+}
 
 
 span.font-medium {
