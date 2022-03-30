@@ -1,10 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #E5E5E5;
-}
-
-div.titulo {
-    font-family: 'Righteous', cursive;
+    padding-top: 92px;
 }
 
 div.navbar {
@@ -17,20 +14,22 @@ div.navbar {
     color: #FFFFFF;
 }
 
-div.navbar > .titulo, div.navbar > .subtitulo {
+div.navbar h1 {
+    font-family: 'Righteous', cursive;
     margin-left: 21px;
-}
-
-div.navbar > .titulo {
     font-size: 44px;
     color: #FFFFFF;
     padding-top: 8px;
     line-height: 54.63px;
 }
 
-div.navbar > .subtitulo {
+div.navbar p {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 21px;
     font-size: 18px;
+    color: #FFFFFF;
 }
+
 
 
 
@@ -40,10 +39,11 @@ div.conteudo-principal {
 }
 
 div.secao {
-
+    display: flex;
+    flex-direction: column; 
 }
 
-div.secao > .titulo {
+div.secao > .titulo-produto {
     color: #333333;
     font-size: 26px;
     font-weight: 400;
@@ -51,6 +51,22 @@ div.secao > .titulo {
 }
 
 
+div.produtos {
+    display: flex;
+    flex-direction: row; 
+}
+
+
+div.produto {
+    display: flex;
+    flex-direction: column; 
+}
+
+div.produto img {
+    height: 87px;
+    width: 144px;
+
+}
 
 
 
