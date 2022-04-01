@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="estilos/reset.css">
-        <link rel="stylesheet" href="estilos/styles.css">
+        <link href="estilos/reset.css" rel="stylesheet">
+        <link href="estilos/styles.css" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +27,16 @@
                         <div class="conteudo-produto">
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Frango Yin Yang</h3>
-                            <p>Um pouco de batata, um pouco de salada</p>
-                            <h4">R$ 14,90</h4>
+                            <p>Um pouco de salada, um pouco de batata</p>
+                            <h4>R$ 14,90</h4>
                         </div>
-                    </div>                    
+                    </div>                
                     <div class="produto prato" id="Bife à Milanesa" onclick="lerProduto(id)">
                         <div class="conteudo-produto">
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Bife à Milanesa</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4 id="valorBifeàMilanesa">R$ 16,90</h4>
+                            <h4>R$ 16,90</h4>
                         </div>
                     </div>
                     <div class="produto prato" id="Macarrão ao Sugo" onclick="lerProduto(id)">
@@ -44,7 +44,7 @@
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Macarrão ao Sugo</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4 id="valorMacarrãoaoSugo">R$ 11,90</h4>
+                            <h4>R$ 11,90</h4>
                         </div>
                     </div>
                     <div class="produto prato" id="Carne de Monstro" onclick="lerProduto(id )">
@@ -52,7 +52,7 @@
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Carne de Monstro</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4 id="valorCarnedeMonstro">R$ 4,90</h4>
+                            <h4>R$ 4,90</h4>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                             <img src="imagens/coquinha_gelada.png" />
                             <h3>Coquinha Gelada</h3>
                             <p>Lata 350mL</p>
-                            <h4 id="valorCocaCola">R$ 4,90</h4>
+                            <h4>R$ 4,90</h4>
                         </div>
                     </div>
                     <div class="produto bebida" id="Suco de Laranja" onclick="lerProduto(id)">
@@ -72,7 +72,7 @@
                             <img src="imagens/coquinha_gelada.png" />
                             <h3>Suco de Laranja</h3>
                             <p>Lata 350mL</p>
-                            <h4 id="valorSucodeLaranja">R$ 7,90</h4>
+                            <h4>R$ 7,90</h4>
                         </div>
                     </div>
                     <div class="produto bebida" id="Brahma" onclick="lerProduto(id)">
@@ -80,7 +80,7 @@
                             <img src="imagens/coquinha_gelada.png" />
                             <h3>Brahma</h3>
                             <p>Latão 473mL</p>
-                            <h4 id="valorBrahma">R$ 5,90</h4>
+                            <h4>R$ 5,90</h4>
                         </div>
                     </div>
                 </div>
@@ -123,86 +123,38 @@
         </div>
 
 
-        <div  class="selecionar">
+        <div class="selecionar">
             <button disabled id="botão-finalizar">Selecione os 3 itens para fechar o pedido</button>
         </div>
 
-
-
-    <script>
-        let area_escolhida;
-        function lerClasse(id){
-            area_escolhida = document.getElementById(id).className.split(" ")[1];
-            return area_escolhida;
-        }
-    </script>
-
-    <script>
-        let prato_escolhido, bebida_escolhida, sobremesa_escolhida;
-        let valores = {};
-
-        function lerProduto(id){
-            area_escolhida = lerClasse(id)
-            div_produto_escolhido = document.getElementById(id);
-            produto_escolhido = div_produto_escolhido.id;
-            if (area_escolhida==="prato") {
-                prato_escolhido = produto_escolhido;
-            } else if (area_escolhida==="bebida") {
-                bebida_escolhida = produto_escolhido;
-            } else if (area_escolhida==="sobremesa") {
-                sobremesa_escolhida = produto_escolhido;
-            }
-
-            todas_as_opcoes = document.getElementsByClassName(`${area_escolhida}`);
-
-            for (let opcao_produto in todas_as_opcoes) {
-                let produto = todas_as_opcoes[opcao_produto]
-                
-                if (typeof(produto)!="object") {continue}
-
-                if (produto.id === produto_escolhido) {
-                    document.getElementById(produto.id).style.borderColor = "green";
-                } else {
-                    document.getElementById(produto.id).style.borderColor = "#ffffff";
-                }
-            }
+        <div class="finalizar">
+            <h5>Confirme seu pedido</h5>
+            <div class="pratos-finalizacao">
+                <div class="item-finalizacao">
+                    <div class="produtos-finalizar">
+                        <p id="display-prato"></p>
+                        <p id="display-prato-valor"></p>
+                    </div>
+                    <div class="produtos-finalizar">
+                        <p id="display-bebida"></p>
+                        <p id="display-bebida-valor"></p>
+                    </div>
+                    <div class="produtos-finalizar">
+                        <p id="display-sobremesa"></p>
+                        <p id="display-sobremesa-valor"></p>
+                    </div>
+                    <div class="produtos-finalizar total">
+                        <p id="display-total">TOTAL</p>
+                        <p id="display-total-valor"></p>
+                    </div>
+                </div>    
+            </div>
+            <div class="botoes">
+                <button id="botao-finalizar">Tudo certo, pode pedir!</button>    
+                <button id="botao-cancelar">Cancelar</button>
+            </div>
             
-            valor = Number(div_produto_escolhido.innerText.split("\n")[div_produto_escolhido.innerText.split("\n").length -1].split(" ")[1].replace(",", ".")).toFixed(2);
-            
-            valores[area_escolhida] = {"produto_escolhido": produto_escolhido,
-                                        "valor": valor};
-            
-            if (verificaSelecao()){
-                document.getElementById("botão-finalizar").textContent = 'Fechar pedido';
-                document.getElementById("botão-finalizar").style.backgroundColor = "#32B72F"
-                document.getElementById("botão-finalizar").disabled = false;
-            };
-        }
-    </script>
-
-
-
-    <script>
-        function verificaSelecao() {
-            if (prato_escolhido==undefined || bebida_escolhida==undefined || sobremesa_escolhida==undefined) {
-                return false;
-            }
-            return true;
-        }
-    </script>
-
-
-
-    <script>
-        function createMessage(prato, bebida, sobremesa, valor) {
-        message = `Olá, gostaria de fazer o pedido:
-        - Prato: ${prato}
-        - Bebida: ${bebida}
-        - Sobremesa: ${sobremesa}
-        Total: R$ ${valor}`
-        }
-    </script>
-    
+        </div>
 </body>
 
 </html>

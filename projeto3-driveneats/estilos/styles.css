@@ -62,7 +62,7 @@ div.produto {
     display: flex;
     flex-direction: column; 
     width: 172px;
-    height: 216px;
+    height: 246px;
     background: #FFFFFF;
     border-radius: 9px;
     margin-right: 16px;
@@ -137,4 +137,74 @@ div.selecionar > button {
 
 div.selecionar-confirmado > button{
     background-color: #32B72F;
+}
+
+div.finalizar {
+    background-color: #50D074;
+    width: 377px;
+    height: 353px;
+    top: calc(50% - 353px/2);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 9px;
+}
+
+div.finalizar > h5 {
+    text-align: center;
+    padding-top: 21px;
+    margin-bottom: 28px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+div.produtos-finalizar {
+    display:flex;
+    justify-content: space-between;
+    padding: 9px 26px;
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+div.display-total, div.display-total-valor {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+div.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+
+#botao-finalizar{
+    background-color: #ffffff;
+    color: #50D074;
+    width: 329px;
+    height: 52px;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#botao-cancelar {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+div.total {
+    font-weight: 700;
 }
