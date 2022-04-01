@@ -34,19 +34,8 @@ div.navbar p {
 
 
 
-
-div.conteudo-principal {
-    /* display: flex;
-    flex-direction: column;   */
-}
-
 div.secao {
-    /* display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;  */
     margin-left: 19px;
-
 }
 
 div.secao h2 {
@@ -68,8 +57,6 @@ div.produtos {
 }
 
 
-
-
 div.produto {
     position: relative;
     display: flex;
@@ -80,6 +67,9 @@ div.produto {
     border-radius: 9px;
     margin-right: 16px;
     box-sizing: border-box;
+    cursor: pointer;
+    border: 5px solid #ffffff;
+
 }
 
 div.conteudo-produto {
@@ -105,7 +95,7 @@ div.conteudo-produto p {
     font-size: 15px;
     line-height: 17.58px;
     color: #A6A6A6;
-    margin-top: 4px;
+    margin: 8px 0 1px 0;
 }
 
 div.conteudo-produto h4 {
@@ -117,6 +107,7 @@ div.conteudo-produto h4 {
     padding-bottom: 16px;
     bottom: 0;
 }
+
 
 
 
