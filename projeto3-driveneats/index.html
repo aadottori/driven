@@ -28,7 +28,7 @@
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Frango Yin Yang</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4>R$ 14,90</h4>
+                            <h4">R$ 14,90</h4>
                         </div>
                     </div>                    
                     <div class="produto prato" id="Bife à Milanesa" onclick="lerProduto(id)">
@@ -36,7 +36,7 @@
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Bife à Milanesa</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4>R$ 14,90</h4>
+                            <h4 id="valorBifeàMilanesa">R$ 16,90</h4>
                         </div>
                     </div>
                     <div class="produto prato" id="Macarrão ao Sugo" onclick="lerProduto(id)">
@@ -44,7 +44,7 @@
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Macarrão ao Sugo</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4>R$ 14,90</h4>
+                            <h4 id="valorMacarrãoaoSugo">R$ 11,90</h4>
                         </div>
                     </div>
                     <div class="produto prato" id="Carne de Monstro" onclick="lerProduto(id )">
@@ -52,7 +52,7 @@
                             <img src="imagens/frango_yin_yang.png" />
                             <h3>Carne de Monstro</h3>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <h4>R$ 14,90</h4>
+                            <h4 id="valorCarnedeMonstro">R$ 4,90</h4>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                             <img src="imagens/coquinha_gelada.png" />
                             <h3>Coquinha Gelada</h3>
                             <p>Lata 350mL</p>
-                            <h4>R$ 4,90</h4>
+                            <h4 id="valorCocaCola">R$ 4,90</h4>
                         </div>
                     </div>
                     <div class="produto bebida" id="Suco de Laranja" onclick="lerProduto(id)">
@@ -72,7 +72,7 @@
                             <img src="imagens/coquinha_gelada.png" />
                             <h3>Suco de Laranja</h3>
                             <p>Lata 350mL</p>
-                            <h4>R$ 4,90</h4>
+                            <h4 id="valorSucodeLaranja">R$ 7,90</h4>
                         </div>
                     </div>
                     <div class="produto bebida" id="Brahma" onclick="lerProduto(id)">
@@ -80,7 +80,7 @@
                             <img src="imagens/coquinha_gelada.png" />
                             <h3>Brahma</h3>
                             <p>Latão 473mL</p>
-                            <h4>R$ 4,90</h4>
+                            <h4 id="valorBrahma">R$ 5,90</h4>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                             <img src="imagens/pudim.png" />
                             <h3>Bolo</h3>
                             <p>Apenas pudim</p>
-                            <h4>R$ 7,90</h4>
+                            <h4>R$ 6,90</h4>
                         </div>
                     </div>
                     <div class="produto sobremesa" id="Torta" onclick="lerProduto(id)">
@@ -107,7 +107,7 @@
                             <img src="imagens/pudim.png" />
                             <h3>Torta</h3>
                             <p>Apenas pudim </p>
-                            <h4>R$ 7,90</h4>
+                            <h4>R$ 9,90</h4>
                         </div>
                     </div>
                     <div class="produto sobremesa" id="Sorvete" onclick="lerProduto(id)">
@@ -115,7 +115,7 @@
                             <img src="imagens/pudim.png" />
                             <h3>Sorvete</h3>
                             <p>Apenas pudim</p>
-                            <h4>R$ 7,90</h4>
+                            <h4>R$ 4,90</h4>
                         </div>
                     </div>
                 </div>
@@ -123,8 +123,8 @@
         </div>
 
 
-        <div class="finalizar">
-            <button>Selecione os 3 itens para fechar o pedido</button>
+        <div  class="selecionar">
+            <button disabled id="botão-finalizar">Selecione os 3 itens para fechar o pedido</button>
         </div>
 
 
@@ -139,10 +139,12 @@
 
     <script>
         let prato_escolhido, bebida_escolhida, sobremesa_escolhida;
+        let valores = {};
+
         function lerProduto(id){
             area_escolhida = lerClasse(id)
-            produto_escolhido = document.getElementById(id).id;
-
+            div_produto_escolhido = document.getElementById(id);
+            produto_escolhido = div_produto_escolhido.id;
             if (area_escolhida==="prato") {
                 prato_escolhido = produto_escolhido;
             } else if (area_escolhida==="bebida") {
@@ -164,7 +166,17 @@
                     document.getElementById(produto.id).style.borderColor = "#ffffff";
                 }
             }
-            console.log(verificaSelecao());
+            
+            valor = Number(div_produto_escolhido.innerText.split("\n")[div_produto_escolhido.innerText.split("\n").length -1].split(" ")[1].replace(",", ".")).toFixed(2);
+            
+            valores[area_escolhida] = {"produto_escolhido": produto_escolhido,
+                                        "valor": valor};
+            
+            if (verificaSelecao()){
+                document.getElementById("botão-finalizar").textContent = 'Fechar pedido';
+                document.getElementById("botão-finalizar").style.backgroundColor = "#32B72F"
+                document.getElementById("botão-finalizar").disabled = false;
+            };
         }
     </script>
 

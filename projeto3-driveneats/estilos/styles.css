@@ -111,7 +111,7 @@ div.conteudo-produto h4 {
 
 
 
-div.finalizar {
+div.selecionar {
     background-color: #FFFFFF;
     width: 100%;
     height: 92px;
@@ -122,10 +122,9 @@ div.finalizar {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-div.finalizar > button {
+div.selecionar > button {
     background-color: #CBCBCB;
     width: calc(100vw - 50px);
     font-size: 20px;
@@ -133,4 +132,9 @@ div.finalizar > button {
     border-radius: 50px;
     border: none;
     height: 53px;
+}
+
+
+div.selecionar-confirmado > button{
+    background-color: #32B72F;
 }
