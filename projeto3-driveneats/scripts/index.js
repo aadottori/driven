@@ -39,9 +39,9 @@ let area_escolhida;
                                         "valor": valor};
             
             if (verificaSelecao()){
-                document.getElementById("botão-finalizar").textContent = 'Fechar pedido';
-                document.getElementById("botão-finalizar").style.backgroundColor = "#32B72F"
-                document.getElementById("botão-finalizar").disabled = false;
+                document.getElementById("botao-finalizar").textContent = 'Fechar pedido';
+                document.getElementById("botao-finalizar").style.backgroundColor = "#32B72F"
+                document.getElementById("botao-finalizar").disabled = false;
                 preencheConfirmacao(valores);
 
             };
@@ -85,8 +85,20 @@ let area_escolhida;
         - Prato: ${prato}
         - Bebida: ${bebida}
         - Sobremesa: ${sobremesa}
-        Total: R$ (${dinheiroPontoParaVirgula(total)}
+        Total: R$ ${dinheiroPontoParaVirgula(total)}
         
         Nome: ${nome}
         Endereço: ${endereco}`
+        }
+
+        let nome, endereco;
+        function pedeNomeEndereco() {
+            if (document.getElementById("botao-finalizar").disabled == false) {
+                nome = prompt("Digite seu nome: ")
+                endereco = prompt("Digite seu endereço: ")                
+            }
+
+        }
+        function enviaMensagem() {
+            message = createMessage(prato_escolhido, bebida_escolhida, sobremesa_escolhida, calculaValorTotal(valores))
         }
